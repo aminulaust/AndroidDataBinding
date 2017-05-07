@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="aminulaust.com.databinding.Student"/>
+       <variable
+           name="student"
+           type="Student"/>
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aminulaust.com.databinding.MainActivity"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+   <EditText
+       android:id="@+id/fNameET"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="22dp"
+       android:text="@{student.firstName}"
+          />
+
+    <EditText
+        android:id="@+id/lNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:text="@{student.lastName}"
+        />
+
+    <Button
+        android:id="@+id/click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:background="@color/colorPrimary"
+        android:textSize="22dp"
+        android:text="Show"
+        android:textColor="#fff"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="22dp"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.firstName}"
+            android:id="@+id/fName"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.lastName}"
+            android:id="@+id/lName"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>
